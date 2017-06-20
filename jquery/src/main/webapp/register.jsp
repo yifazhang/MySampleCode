@@ -1,18 +1,18 @@
-<%@page language="java" pageEncoding="utf-8" %>
-
+<%@page language="java" pageEncoding="UTF-8" %>
 <html>
 <head>
     <title>注册</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 </head>
 <body>
 
     <form>
-        用户名:<input id="usernameId" type="text" name="username" maxlength="4"/>
+        用户名[GET]:<input id="usernameId" type="text" name="username" maxlength="4"/>
         光标移出后，立即检查结果
     </form>
-    <br/>
+    <hr/>
     <span id="resId"></span>
-
+    <br/>
     <script type="text/javascript">
         function createAJAX() {
             var xmlhttp = null;
@@ -33,9 +33,10 @@
                 document.getElementById("resId").innerHTML = "用户名必填";
             } else {
                 //对姓名中文转码 utf-8
-                username = decodeURI(username);
+                username = encodeURI(username);
                 var xmlhttp = createAJAX();
-                xmlhttp.open("GET","<%=request.getContextPath()%>/UserServlet?time="+ new Date().getTime()+"&username="+username);
+                var url = "<%=request.getContextPath()%>/UserServlet?time="+ new Date().getTime()+"&username="+username;
+                xmlhttp.open("GET",url);
                 xmlhttp.send();
 
                 xmlhttp.onreadystatechange = function () {
