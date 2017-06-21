@@ -1,4 +1,4 @@
-package com.zhangyifa.time;
+package com.zhangyifa.ajax.time;
 
 
 import javax.servlet.ServletException;
@@ -22,6 +22,6 @@ public class TimeServlet extends HttpServlet {
         System.out.println(nowStr);
         req.setAttribute("nowStr",nowStr);
         System.out.println(req.getAttribute("nowStr"));
-        req.getRequestDispatcher("/index.jsp").forward(req,resp);
+        req.getRequestDispatcher("/ajax/index.jsp").forward(req,resp);
     }
 }

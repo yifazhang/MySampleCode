@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    var ps = [
+        {
+            id: 1,
+            name: 'xiao'
+        },
+        {
+            id: 2,
+            name: 'ming'
+        },
+        {
+            id: 3,
+            name: 'hong'
+        },
+    ];
+</script>
+<script type="text/javascript">
+    document.write("共用" + ps.length + "个学生<br/>");
+    for (var i = 0; i < ps.length; i++) {
+        document.write("编号:" +ps[i].id+"<br/>");
+        document.write("姓名:" +ps[i].name+"<br/>");
+    }
+</script>
+</body>
+</html>

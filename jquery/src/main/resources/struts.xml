@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <package name="myPackage" extends="json-default" namespace="/">
+
+        <global-results>
+            <result name="success" type="json"></result>
+        </global-results>
+
+        <action name="checkRequest"
+                class="com.zhangyifa.ajax.checkcode.CheckcodeAction"
+                method="check">
+        </action>
+        
+        <action name="findCityByProvinceRequest"
+                class="com.zhangyifa.ajax.area.ProvinceCityAreaAction"
+                method="findCityByProvince">    
+        </action>
+        
+        <action name="findAreaByCityRequest"
+                class="com.zhangyifa.ajax.area.ProvinceCityAreaAction"
+                method="findAreaByCity">
+        </action>
+        
+    </package>
+
+
+</struts>

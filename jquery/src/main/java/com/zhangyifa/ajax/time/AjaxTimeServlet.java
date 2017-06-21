@@ -1,4 +1,4 @@
-package com.zhangyifa.time;
+package com.zhangyifa.ajax.time;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

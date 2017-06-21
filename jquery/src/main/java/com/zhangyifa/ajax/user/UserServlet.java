@@ -1,4 +1,4 @@
-package com.zhangyifa.user;
+package com.zhangyifa.ajax.user;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
