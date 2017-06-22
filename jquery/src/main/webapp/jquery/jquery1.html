@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <input id="inputID" type="button" value="这就是jQuery库,写少代码，做多事情"/>
+
+    <div id="divID">哈哈</div>
+
+    <script type="text/javascript">
+        //取得<input>标签中的value属性的内容
+        //js方式
+//        var inputElement = document.getElementById("inputID");
+//        var input = inputElement.value;
+//        alert(input);
+        //jQuery方式
+//        var $input = $("#inputID");
+//        var input = $input.val();
+//        alert(input);
+
+
+        //取得<div>标签中的文本内容
+        //js方式
+//        var divElement = document.getElementById("divID");
+//        var div = divElement.innerHTML;
+//        alert(div);
+        //jQuery方式
+        var $div = $("#divID");
+        var div = $div.html();
+        alert(div);
+
+
+    </script>
+</body>
+</html>

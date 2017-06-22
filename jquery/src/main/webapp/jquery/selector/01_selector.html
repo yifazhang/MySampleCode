@@ -1,0 +1,65 @@
+﻿<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+      <!--<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+  </head>
+  <body>
+  	<div id="div1ID">div1</div>
+  	<div id="div2ID">div2</div>
+  	<span class="myClass">span</span>
+  	<p>p</p>
+  	<script type="text/javascript">
+        //.size()方法从jQuery 1.8开始被废弃。使用.length属性代替。
+        //.size()方法功能上等价于.length属性。但是.length 属性是首选的，因为它没有函数调用时的额外开销。
+
+        // 1)查找ID为"div1ID"的元素个数
+//         alert( $("#div1ID").length);
+
+        //2)查找DIV元素的个数
+//        alert( $("div").length);
+
+        //3)查找所有样式是"myClass"的元素的个数
+//        alert( $(".myClass").length);
+
+        //4)查找所有DIV,SPAN,P元素的个数
+//        alert($("DIV,SPAN,P").length);
+
+        //5)查找所有ID为div1ID,CLASS为myClass,P元素的个数
+        alert($("#div1ID,.myClass,p").length);
+
+  	</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

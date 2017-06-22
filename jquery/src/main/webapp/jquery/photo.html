@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟jQuery</title>
+</head>
+<body>
+
+<img src="../images/zgl.jpg" height="220" width="200"/>
+<input id="hide" type="button" value="隐藏" style="position: absolute;top: 250px; left: 50px;"/>
+&nbsp;&nbsp;&nbsp;
+<input id="show" type="button" value="显示" style="position: absolute;top: 250px; left: 120px;"/>
+
+<script type="text/javascript">
+    //定位隐藏按钮，同时提供点击事件
+    document.getElementById("hide").onclick = function () {
+        //定位图片
+        var img = document.images[0];
+        img.style.visibility = "hidden";
+    }
+
+    document.getElementById("show").onclick = function () {
+        //定位图片
+        var img = document.images[0];
+        img.style.visibility = "visible";
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
