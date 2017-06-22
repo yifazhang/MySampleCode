@@ -3,7 +3,7 @@
 <head>
     <title>注册</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="../js/ajax.js"></script>
 </head>
 <body>
 
