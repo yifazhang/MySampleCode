@@ -3,14 +3,32 @@
   <head>
     <title>method_1.html</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+      <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
   </head>
   <body>
-  
-  	<hr/>
+
   
   	<script type="text/javascript">
   		//创建div元素，添加"哈哈"文本，ID属性，并添加到文档中
+        //<body><div id="2015">哈哈</div></body>
+
+        //js
+        /*
+        var divElement = document.createElement("div");
+//        divElement.setAttribute("id","2015");
+        divElement.id = "2015";
+        divElement.innerHTML = "哈哈";
+
+//        var body = document.getElementsByTagName("body")[0];
+//        body.appendChild(divElement);
+        document.body.appendChild(divElement);
+        */
+
+        //jquery
+        var $div = $("<div id='2015'>哈哈</div>");
+//        $("body").append($div);
+        $(document.body).append($div);
+
   	</script>
   
   </body>

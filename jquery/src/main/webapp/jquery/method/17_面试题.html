@@ -1,10 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-	 <script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+	  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	  <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
   	 <script type="text/javascript">
   	  	function myclick(){
-	 		//使用jquery弹出奇数的tr标签下的td里的值
+	 		//使用jquery弹出奇数的tr标签下的td里的值 A1,A2,A3,C1,C2,C3
+			$("table tr:not(:last):even td").each(function () {
+				alert($(this).text());
+            });
 	 	}
   	 </script>
   </head>

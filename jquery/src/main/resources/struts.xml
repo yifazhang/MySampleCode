@@ -26,8 +26,20 @@
                 class="com.zhangyifa.ajax.area.ProvinceCityAreaAction"
                 method="findAreaByCity">
         </action>
-        
+
     </package>
 
+
+    <package name="jqueryUser" extends="json-default" namespace="/">
+        <global-results>
+            <result name="success" type="json"></result>
+        </global-results>
+
+        <action name="jfindCityByProvinceRequest"
+                class="com.zhangyifa.jquery.ajax.ProvinceCityAction"
+                method="findCity">
+
+        </action>
+    </package>
 
 </struts>

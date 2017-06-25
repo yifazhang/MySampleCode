@@ -2,7 +2,7 @@
 <html>
   <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<script type="text/javascript" src="/js-day04/js/jquery-1.8.2.js"></script> 
+	  <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
   </head>
   <body>
   	<table id="tableID" border="1" align="center" width="60%">
@@ -32,7 +32,50 @@
   </body>
   
   <script type="text/javascript">
-  		//定位"增加"按钮，同时添加单击事件
+	  //定位"增加"按钮，同时添加单击事件
+	  $("#addID").click(function () {
+	      var username = $("#usernameID").val();
+	      var password = $("#passwordID").val();
+
+	      //去空格
+	      username = $.trim(username);
+	      password = $.trim(password);
+
+	      if (username.length == 0 || password.length == 0) {
+	          alert("用户名或密码没有填");
+		  } else {
+	          var $tr = $("<tr></tr>");
+
+	          var $td1 = $("<td>"+username+"</td>");
+	          var $td2 = $("<td>"+password+"</td>");
+			  var $td3 = $("<td></td>");
+			  //input标签 设置为删除按钮
+			  var $del = $("<input type='button' value='删除'/>");
+			  $del.click(function () {
+				  //删除按钮所在行
+				  $tr.remove();
+              });
+			  $td3.append($del);
+
+              $tr.append($td1);
+              $tr.append($td2);
+              $tr.append($td3);
+
+              //tr添加到tbody标签中
+			  $("#tbodyID").append($tr);
+			  //清空用户名和密码文本框的内容
+			  $("#usernameID").val("");
+			  $("#passwordID").val("");
+
+
+
+          }
+
+
+
+
+      });
+
   </script>
   
 </html>

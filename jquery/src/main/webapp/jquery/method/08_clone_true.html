@@ -3,7 +3,7 @@
   <head>
     <title>method_1.html</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+      <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
   </head>
   <body>
 	
@@ -12,8 +12,23 @@
 	 	
 	<script type="text/javascript">
 		//复制原input元素，添加到原input元素后，与其同级
+//        var $old = $(":button");
+//        var $new = $old.clone();
+//        $new.val("新按钮");
+//        $old.after($new);
+
 		//为原input元素动态添加单击事件，且复制原input元素，
+        var $old = $(":button");
+        $old.click(function () {
+            alert("动态事件");
+        });
+
         //添加到原input元素后，与其同级，且和原按钮有一样的行为
+        var $old = $(":button");
+        var $new = $old.clone(true);
+        $new.val("新按钮");
+        $old.after($new);
+
 	</script>
   </body>
 </html>

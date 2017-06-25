@@ -3,7 +3,7 @@
   <head>
     <title>method_1.html</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+	  <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
   </head>
   <body>
 	<p>Hello</p>
@@ -19,9 +19,22 @@
 
 	<script type="text/javascript">
 		//取得div元素的直接子元素内容，不含后代元素
-		//取得div元素的下一个同级的兄弟元素内容	
+//		var $span = $("div").children();
+//		var content = $span.text();
+//		alert(content);
+
+		//取得div元素的下一个同级的兄弟元素内容
+//        alert($("div").next().text());
+
 		//取得div元素的上一个同级的兄弟元素内容
+//		alert($("div").prev().text());
+
 		//依次取得div元素的上下一个同级的所有兄弟元素的内容
+		var $all = $("div").siblings("p");
+		$all.each(function () {
+			alert($(this).html());
+        });
+
 	</script>
 	
   </body>

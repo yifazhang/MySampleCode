@@ -9,7 +9,7 @@
     		color:red
     	}
     </style>
-   <script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+      <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
   </head>
   <body>
 	
@@ -19,9 +19,17 @@
 	
 	<script type="text/javascript">
 		//为无样式的DIV添加样式
+//        $("div:first").addClass("myClass");
+
 		//为有样式的DIV删除样式
+//        $("div:last").removeClass("myClass");
+
 		//切换样式，即有样式的变成无样式，无样式的变成有样式
+//        $("div").toggleClass("myClass");
+
 		//最后一个DIV是否有样式
+        var flag = $("div:last").hasClass("myClass");
+        alert(true == flag ? "有样式" : "无样式");
 	</script>
   
   </body>

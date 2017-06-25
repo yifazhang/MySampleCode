@@ -3,7 +3,7 @@
   <head>
     <title>method_1.html</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
   </head>
   <body>
 	
@@ -19,7 +19,10 @@
 	
 	<script type="text/javascript">
 		//DIV标签插入到UL标签之后(父子关系)
+//		$("ul").append($("div"));
+
 		//DIV标签插入到UL标签之前(父子关系)
+		$("ul").prepend($("div"));
 	</script>
 	
   </body>
