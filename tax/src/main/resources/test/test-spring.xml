@@ -4,5 +4,10 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <bean id="myDao" class="com.zhangyifa.test.dao.impl.MyDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+
     <context:component-scan base-package="com.zhangyifa.test.service.impl"></context:component-scan>
 </beans>

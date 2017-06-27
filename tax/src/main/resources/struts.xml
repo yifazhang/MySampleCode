@@ -15,5 +15,5 @@
     <!-- 把主题配置成simple -->
     <constant name="struts.ui.theme" value="simple" />
 
-    <include file="test/test-struts.xml"/>
+    <include file="com.zhangyifa.test/com.zhangyifa.test-struts.xml"/>
 </struts>
