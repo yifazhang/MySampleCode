@@ -1,2 +1,6 @@
-2017-06-27 17:56:43,411 [main]  WARN  org.springframework.context.support.ClassPathXmlApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: entity class not found: com.zhangyifa.com.zhangyifa.test.entity.Person
-2017-06-27 17:57:44,688 [main]  WARN  org.springframework.context.support.ClassPathXmlApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: entity class not found: com.zhangyifa.com.zhangyifa.test.entity.Person
+2017-06-27 21:13:52.866 TRACE com.zhangyifa.test.log.LogTest 17 testLog - this is a trace
+2017-06-27 21:13:52.877 DEBUG com.zhangyifa.test.log.LogTest 18 testLog - debug 级别日志
+2017-06-27 21:13:52.887 INFO  com.zhangyifa.test.log.LogTest 19 testLog - info 级别日志
+2017-06-27 21:13:52.887 WARN  com.zhangyifa.test.log.LogTest 20 testLog - warn 级别日志
+2017-06-27 21:13:52.894 ERROR com.zhangyifa.test.log.LogTest 21 testLog - error 级别日志
+2017-06-27 21:13:52.895 FATAL com.zhangyifa.test.log.LogTest 22 testLog - fatal 级别日志
