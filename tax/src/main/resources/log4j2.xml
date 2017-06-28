@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
+<Configuration status="Debug">
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
         </Console>
-        <File name="log" fileName="log/tax.log" append="false">
-            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        <File name="I" fileName="logs/info.log" bufferedIO="false"
+              advertise="true">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+        <File name="E" fileName="logs/error.log" bufferedIO="false"
+              advertise="true">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
         </File>
     </Appenders>
+
     <Loggers>
-        <Logger name="com.dbyl.libarary.utils.Log" level="all">
+        <!--制定输出com包中的logger-->
+        <Logger name="com" level="debug">
             <AppenderRef ref="Console"/>
-            <AppenderRef ref="log"/>
+            <AppenderRef ref="I"/>
+            <AppenderRef ref="E"/>
         </Logger>
-        <Root level="trace">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="log"/>
+
+        <!--忽略hibernate等第三方包的日志-->
+        <Root level="OFF">
         </Root>
+
     </Loggers>
 </Configuration>

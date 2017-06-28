@@ -1,6 +1,0 @@
-2017-06-27 21:13:52.866 TRACE com.zhangyifa.test.log.LogTest 17 testLog - this is a trace
-2017-06-27 21:13:52.877 DEBUG com.zhangyifa.test.log.LogTest 18 testLog - debug 级别日志
-2017-06-27 21:13:52.887 INFO  com.zhangyifa.test.log.LogTest 19 testLog - info 级别日志
-2017-06-27 21:13:52.887 WARN  com.zhangyifa.test.log.LogTest 20 testLog - warn 级别日志
-2017-06-27 21:13:52.894 ERROR com.zhangyifa.test.log.LogTest 21 testLog - error 级别日志
-2017-06-27 21:13:52.895 FATAL com.zhangyifa.test.log.LogTest 22 testLog - fatal 级别日志

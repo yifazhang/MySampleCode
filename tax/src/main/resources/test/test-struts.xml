@@ -6,9 +6,14 @@
 
 <struts>
 
-    <package name="test-action" namespace="/" extends="struts-default">
+    <package name="test-action" namespace="/nsfw" extends="base">
         <action name="test_*" class="com.zhangyifa.test.action.MyAction" method="{1}">
             <result name="success">/WEB-INF/jsp/test/test.jsp</result>
         </action>
+
+        <action name="test2_*" class="com.zhangyifa.nsfw.user.action.UserAction" method="{1}">
+            <result name="{1}">/WEB-INF/jsp/nsfw/user/{1}.jsp</result>
+        </action>
+
     </package>
 </struts>

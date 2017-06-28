@@ -1,0 +1,2 @@
+15:29:04.856 [http-bio-8080-exec-5] ERROR com.opensymphony.xwork2.interceptor.ParametersInterceptor - Developer Notification (set struts.devMode to false to disable this message):
+Unexpected Exception caught setting 'user.birthday' on 'class com.zhangyifa.nsfw.user.action.UserAction: Error setting expression 'user.birthday' with value ['20000101', ]
