@@ -1,3 +1,5 @@
 /**
  *
  */
+
+CREATE DATABASE IF NOT EXISTS tax DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
