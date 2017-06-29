@@ -12,7 +12,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-            <scope>com.zhangyifa.com.zhangyifa.test</scope>
+            <scope>test</scope>
         </dependency>
 
         <!-- log4j -->
