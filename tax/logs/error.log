@@ -1,0 +1,14 @@
+12:03:41.391 [http-bio-8080-exec-3] ERROR com.opensymphony.xwork2.interceptor.ParametersInterceptor - Developer Notification (set struts.devMode to false to disable this message):
+Unexpected Exception caught setting 'user.action' on 'class com.zhangyifa.nsfw.user.action.UserAction: Error setting expression 'user.action' with value ['admin', ]
+12:04:05.561 [http-bio-8080-exec-4] ERROR com.opensymphony.xwork2.interceptor.ParametersInterceptor - Developer Notification (set struts.devMode to false to disable this message):
+Unexpected Exception caught setting 'user.action' on 'class com.zhangyifa.nsfw.user.action.UserAction: Error setting expression 'user.action' with value ['admin1', ]
+12:05:05.109 [http-bio-8080-exec-5] ERROR com.opensymphony.xwork2.interceptor.ParametersInterceptor - Developer Notification (set struts.devMode to false to disable this message):
+Unexpected Exception caught setting 'user.action' on 'class com.zhangyifa.nsfw.user.action.UserAction: Error setting expression 'user.action' with value ['user1', ]
+12:08:44.498 [http-bio-8080-exec-7] ERROR com.opensymphony.xwork2.interceptor.ParametersInterceptor - Developer Notification (set struts.devMode to false to disable this message):
+Unexpected Exception caught setting 'user.action' on 'class com.zhangyifa.nsfw.user.action.UserAction: Error setting expression 'user.action' with value ['user2', ]
+14:07:54.913 [http-bio-8080-exec-2] ERROR com.opensymphony.xwork2.interceptor.ParametersInterceptor - Developer Notification (set struts.devMode to false to disable this message):
+Unexpected Exception caught setting 'user.action' on 'class com.zhangyifa.nsfw.user.action.UserAction: Error setting expression 'user.action' with value ['user1', ]
+14:08:26.179 [http-bio-8080-exec-3] ERROR com.opensymphony.xwork2.interceptor.ParametersInterceptor - Developer Notification (set struts.devMode to false to disable this message):
+Unexpected Exception caught setting 'user.action' on 'class com.zhangyifa.nsfw.user.action.UserAction: Error setting expression 'user.action' with value ['user2', ]
+14:13:21.932 [http-bio-8080-exec-2] ERROR com.opensymphony.xwork2.interceptor.ParametersInterceptor - Developer Notification (set struts.devMode to false to disable this message):
+Unexpected Exception caught setting 'user.action' on 'class com.zhangyifa.nsfw.user.action.UserAction: Error setting expression 'user.action' with value ['user1', ]

@@ -6,8 +6,22 @@
 
 <struts>
 
-    <package name="base" namespace="/" extends="struts-default">
+    <package name="base" extends="struts-default">
+
+        <result-types>
+            <result-type name="error" class="com.zhangyifa.core.exception.SysException"></result-type>
+        </result-types>
+        <!-- 全局映射结果 -->
+        <global-results>
+            <result name="sysError" type="error">/WEB-INF/jsp/error.jsp</result>
+        </global-results>
+
         <global-allowed-methods>regex:.*</global-allowed-methods>
+        <!-- 全局异常映射 -->
+        <global-exception-mappings>
+            <exception-mapping exception="com.zhangyifa.core.exception.SysException" result="sysError"></exception-mapping>
+        </global-exception-mappings>
+
     </package>
 
     <!-- 禁用动态方法访问 -->

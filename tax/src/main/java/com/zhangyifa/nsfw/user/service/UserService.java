@@ -3,6 +3,7 @@ package com.zhangyifa.nsfw.user.service;
 import com.zhangyifa.nsfw.user.entity.User;
 
 import javax.servlet.ServletOutputStream;
+import java.io.File;
 import java.io.Serializable;
 import java.util.List;
 
@@ -49,5 +50,16 @@ public interface UserService {
      */
     public void exportExcel(List<User> userList, ServletOutputStream outputStream);
 
+    /**
+     * 导入用户列表
+     */
+    public void importExcel(File userExcel, String userExcelFileName);
 
+    /**
+     * 根据账号和用户id查询用户
+     * @param id 用户ID
+     * @param account 用户账号
+     * @return
+     */
+    public List<User> findUserByAccountAndId(String id, String account);
 }

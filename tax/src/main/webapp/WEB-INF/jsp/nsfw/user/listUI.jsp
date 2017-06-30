@@ -37,6 +37,11 @@
         function doExportExcel() {
             window.open("${basePath}nsfw/user_exportExcel.action");
         }
+        //导入用户
+        function doImportExcel() {
+            document.forms[0].action = "${basePath}nsfw/user_importExcel.action";
+            document.forms[0].submit();
+        }
     </script>
 </head>
 <body class="rightBody">

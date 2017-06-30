@@ -4,6 +4,57 @@
     <%@include file="/common/header.jsp"%>
     <title>用户管理</title>
     <script type="text/javascript" src="${basePath}js/datepicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        var vResult = false;
+        //校验账户唯一
+        function doVerify() {
+            //1.获取账户
+            var account = $("#account").val();
+            if ("" != account) {
+                //2.校验
+                $.ajax({
+                    url:"${basePath}nsfw/user_verifyAccount.action",
+                    data:{"user.account":account},
+                    type:"post",
+                    async: false,//非异步
+                    success: function (msg) {
+                        if ("true" != msg) {
+                            //账户已经存在
+                            alert("账户已存在。请使用其他账户");
+                            //定焦
+                            $("#account").focus();
+                            vResult = false;
+                        } else {
+                            vResult = true;
+                        }
+                    }
+                });
+            }
+        }
+
+        //提交
+        function doSubmit() {
+            var name = $("#name");
+            if ("" == name.val()) {
+                name.focus();
+                return false;
+            }
+
+            var password = $("#password");
+            if ("" == password.val()) {
+                password.focus();
+                return false;
+            }
+
+            //账号校验
+            doVerify();
+            if (vResult) {
+                //提交表单
+                document.forms[0].submit();
+            }
+        }
+
+    </script>
 </head>
 <body class="rightBody">
 <form id="form" name="form" action="${basePath}nsfw/user_add.action" method="post" enctype="multipart/form-data">
@@ -25,15 +76,15 @@
         </tr>
         <tr>
             <td class="tdBg" width="200px">用户名：</td>
-            <td><s:textfield name="user.name"/> </td>
+            <td><s:textfield id="name" name="user.name"/> </td>
         </tr>
         <tr>
             <td class="tdBg" width="200px">帐号：</td>
-            <td><s:textfield name="user.account"/></td>
+            <td><s:textfield id="account" name="user.account" onchange="doVerify()"/></td>
         </tr>
         <tr>
             <td class="tdBg" width="200px">密码：</td>
-            <td><s:textfield name="user.password"/></td>
+            <td><s:textfield id="password" name="user.password"/></td>
         </tr>
         <tr>
             <td class="tdBg" width="200px">性别：</td>

@@ -3,15 +3,18 @@ package com.zhangyifa.nsfw.user.action;
 import com.opensymphony.xwork2.ActionSupport;
 import com.zhangyifa.nsfw.user.entity.User;
 import com.zhangyifa.nsfw.user.service.UserService;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
 
 import javax.annotation.Resource;
+import javax.jws.soap.SOAPBinding;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import java.util.UUID;
 
@@ -29,6 +32,9 @@ public class UserAction extends ActionSupport {
     private String headImgContentType;
     private String headImgFileName;
 
+    private File userExcel;
+    private String userExcelContentType;
+    private String userExcelFileName;
 
     //列表页面
     public String listUI() {
@@ -137,6 +143,43 @@ public class UserAction extends ActionSupport {
 
     }
 
+    //导入用户列表
+    public String importExcel() {
+        //1.获取excel
+        if (userExcel != null) {
+            if (userExcelFileName.matches("^.+\\.(?i)((xls)|(xlsx))$")) {
+                //2.导入
+                userService.importExcel(userExcel, userExcelFileName);
+            }
+        }
+        return "list";
+    }
+
+    //校验用户账户唯一
+    public void verifyAccount() {
+        try {
+            //1、获取帐号
+            if(user != null && StringUtils.isNotBlank(user.getAccount())){
+                //2、根据帐号到数据库中校验是否存在该帐号对应的用户
+                List<User> list = userService.findUserByAccountAndId(user.getId(), user.getAccount());
+                String strResult = "true";
+                if(list != null && list.size() > 0){
+                    //说明该帐号已经存在
+                    strResult = "false";
+                }
+                //输出
+                HttpServletResponse response = ServletActionContext.getResponse();
+                response.setContentType("text/html");
+                PrintWriter writer = response.getWriter();
+                writer.write(strResult);
+                writer.flush();
+                writer.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public List<User> getUserList() {
         return userList;
     }
@@ -183,5 +226,29 @@ public class UserAction extends ActionSupport {
 
     public void setHeadImgFileName(String headImgFileName) {
         this.headImgFileName = headImgFileName;
+    }
+
+    public File getUserExcel() {
+        return userExcel;
+    }
+
+    public void setUserExcel(File userExcel) {
+        this.userExcel = userExcel;
+    }
+
+    public String getUserExcelContentType() {
+        return userExcelContentType;
+    }
+
+    public void setUserExcelContentType(String userExcelContentType) {
+        this.userExcelContentType = userExcelContentType;
+    }
+
+    public String getUserExcelFileName() {
+        return userExcelFileName;
+    }
+
+    public void setUserExcelFileName(String userExcelFileName) {
+        this.userExcelFileName = userExcelFileName;
     }
 }

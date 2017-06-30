@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="error">
+<Configuration status="warn">
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
@@ -17,7 +17,7 @@
 
     <Loggers>
         <!--制定输出com包中的logger-->
-        <Logger name="com" level="debug">
+        <Logger name="com" level="DEBUG">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="I"/>
             <AppenderRef ref="E"/>
