@@ -1,0 +1,1441 @@
+2017-07-19 11:50:07,344 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 11:50:07,372 28   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 11:50:07 CST 2017]; root of context hierarchy
+2017-07-19 11:50:07,417 73   [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 11:50:07,633 289  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 11:50:07,866 522  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 11:50:08,288 944  [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 11:50:08,386 1042 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 11:50:13,436 6092 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 11:50:14,531 7187 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 11:50:14,534 7190 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 11:50:14,535 7191 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 11:50:14,536 7192 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 11:50:15,049 7705 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 11:50:07 CST 2017]; root of context hierarchy
+2017-07-19 11:50:15,149 7805 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 11:50:07 CST 2017]; root of context hierarchy
+2017-07-19 11:50:15,282 7938 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 11:50:15,386 8042 [localhost-startStop-1] (AbstractApplicationContext.java:550) WARN  org.springframework.web.context.support.XmlWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'freemarkerConfig' defined in file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]: Invocation of init method failed; nested exception is java.lang.NoSuchFieldError: DEFAULT_INCOMPATIBLE_IMPROVEMENTS
+2017-07-19 11:50:15,391 8047 [localhost-startStop-1] (FrameworkServlet.java:502) ERROR org.springframework.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'freemarkerConfig' defined in file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]: Invocation of init method failed; nested exception is java.lang.NoSuchFieldError: DEFAULT_INCOMPATIBLE_IMPROVEMENTS
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:138)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoSuchFieldError: DEFAULT_INCOMPATIBLE_IMPROVEMENTS
+	at org.springframework.ui.freemarker.FreeMarkerConfigurationFactory.newConfiguration(FreeMarkerConfigurationFactory.java:320)
+	at org.springframework.ui.freemarker.FreeMarkerConfigurationFactory.createConfiguration(FreeMarkerConfigurationFactory.java:250)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.afterPropertiesSet(FreeMarkerConfigurer.java:116)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 28 more
+2017-07-19 11:52:14,857 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 11:52:14,882 25   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 11:52:14 CST 2017]; root of context hierarchy
+2017-07-19 11:52:14,930 73   [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 11:52:15,125 268  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 11:52:15,295 438  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 11:52:15,747 890  [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 11:52:15,846 989  [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 11:52:20,905 6048 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 11:52:22,042 7185 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 11:52:22,045 7188 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 11:52:22,046 7189 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 11:52:22,048 7191 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 11:52:22,581 7724 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 11:52:14 CST 2017]; root of context hierarchy
+2017-07-19 11:52:22,659 7802 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 11:52:14 CST 2017]; root of context hierarchy
+2017-07-19 11:52:22,762 7905 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 11:52:22,922 8065 [localhost-startStop-1] (AbstractApplicationContext.java:550) WARN  org.springframework.web.context.support.XmlWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'freemarkerConfig' defined in file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]: Invocation of init method failed; nested exception is java.lang.NoSuchFieldError: DEFAULT_INCOMPATIBLE_IMPROVEMENTS
+2017-07-19 11:52:22,928 8071 [localhost-startStop-1] (FrameworkServlet.java:502) ERROR org.springframework.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'freemarkerConfig' defined in file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]: Invocation of init method failed; nested exception is java.lang.NoSuchFieldError: DEFAULT_INCOMPATIBLE_IMPROVEMENTS
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:138)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoSuchFieldError: DEFAULT_INCOMPATIBLE_IMPROVEMENTS
+	at org.springframework.ui.freemarker.FreeMarkerConfigurationFactory.newConfiguration(FreeMarkerConfigurationFactory.java:320)
+	at org.springframework.ui.freemarker.FreeMarkerConfigurationFactory.createConfiguration(FreeMarkerConfigurationFactory.java:250)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.afterPropertiesSet(FreeMarkerConfigurer.java:116)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 28 more
+2017-07-19 11:57:55,008 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 11:57:55,048 40   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 11:57:55 CST 2017]; root of context hierarchy
+2017-07-19 11:57:55,131 123  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 11:57:55,796 788  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 11:57:55,992 984  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 11:57:56,550 1542 [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 11:57:56,710 1702 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 11:58:01,775 6767 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 11:58:02,714 7706 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 11:58:02,718 7710 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 11:58:02,734 7726 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 11:58:02,735 7727 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 11:58:03,474 8466 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 11:57:55 CST 2017]; root of context hierarchy
+2017-07-19 11:58:03,602 8594 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 11:57:55 CST 2017]; root of context hierarchy
+2017-07-19 11:58:03,725 8717 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 11:58:03,874 8866 [localhost-startStop-1] (FreeMarkerConfigurer.java:127) INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-19 11:58:04,113 9105 [localhost-startStop-1] (FrameworkServlet.java:508) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 9087 ms
+2017-07-19 11:58:04,396 9388 [http-bio-8080-exec-1] (AbstractPoolBackedDataSource.java:462) INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 2, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 10000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge13q9pooy7tt15o8n23|435885b9, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge13q9pooy7tt15o8n23|435885b9, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/shopping0718?useUnicode=true&characterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2017-07-19 11:58:05,134 10126 [http-bio-8080-exec-1] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "include/header.ftl" at line 4, column 14]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #if user  [in template "include/header.ftl" at line 4, column 9]
+	- Reached through: #include "include/header.ftl"  [in template "login.ftl" at line 6, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:77)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:40)
+	at freemarker.core.NonBooleanException.<init>(NonBooleanException.java:44)
+	at freemarker.core.Expression.modelToBoolean(Expression.java:142)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:125)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:110)
+	at freemarker.core.IfBlock.accept(IfBlock.java:46)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.include(Environment.java:2072)
+	at freemarker.core.Include.accept(Include.java:167)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 11:58:46,201 51193 [http-bio-8080-exec-3] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> RequestParameters['type']  [in template "index.ftl" at line 7, column 21]
+
+----
+Tip: It's the final [] step that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = RequestParameters[...  [in template "index.ftl" at line 7, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.Assignment.accept(Assignment.java:136)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 14:34:30,777 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 14:34:30,810 33   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 14:34:30 CST 2017]; root of context hierarchy
+2017-07-19 14:34:30,850 73   [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 14:34:31,391 614  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 14:34:31,494 717  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 14:34:31,819 1042 [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 14:34:31,930 1153 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 14:34:36,981 6204 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 14:34:37,781 7004 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 14:34:37,783 7006 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 14:34:37,787 7010 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 14:34:37,789 7012 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 14:34:38,404 7627 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 14:34:30 CST 2017]; root of context hierarchy
+2017-07-19 14:34:38,506 7729 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 14:34:30 CST 2017]; root of context hierarchy
+2017-07-19 14:34:38,601 7824 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 14:34:38,817 8040 [localhost-startStop-1] (FreeMarkerConfigurer.java:127) INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-19 14:34:38,971 8194 [localhost-startStop-1] (FrameworkServlet.java:508) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 8182 ms
+2017-07-19 14:35:05,289 34512 [http-bio-8080-exec-1] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> RequestParameters['type']  [in template "index.ftl" at line 7, column 21]
+
+----
+Tip: It's the final [] step that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = RequestParameters[...  [in template "index.ftl" at line 7, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.Assignment.accept(Assignment.java:136)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:03:12,132 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 15:03:12,196 64   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:03:12 CST 2017]; root of context hierarchy
+2017-07-19 15:03:12,239 107  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 15:03:12,616 484  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 15:03:12,766 634  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 15:03:13,522 1390 [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 15:03:13,660 1528 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 15:03:18,735 6603 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 15:03:19,897 7765 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 15:03:19,900 7768 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 15:03:19,902 7770 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 15:03:19,904 7772 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 15:03:20,544 8412 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:03:12 CST 2017]; root of context hierarchy
+2017-07-19 15:03:20,662 8530 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:03:12 CST 2017]; root of context hierarchy
+2017-07-19 15:03:20,811 8679 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 15:03:20,997 8865 [localhost-startStop-1] (FreeMarkerConfigurer.java:127) INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-19 15:03:21,249 9117 [localhost-startStop-1] (FrameworkServlet.java:508) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 9075 ms
+2017-07-19 15:03:21,833 9701 [http-bio-8080-exec-1] (_Log4jLoggerFactory.java:59) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> RequestParameters['type']  [in template "index.ftl" at line 7, column 21]
+
+----
+Tip: It's the final [] step that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = RequestParameters[...  [in template "index.ftl" at line 7, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134)
+	at freemarker.core.Assignment.accept(Assignment.java:139)
+	at freemarker.core.Environment.visit(Environment.java:326)
+	at freemarker.core.Environment.visit(Environment.java:332)
+	at freemarker.core.Environment.process(Environment.java:305)
+	at freemarker.template.Template.process(Template.java:378)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:03:49,272 37140 [http-bio-8080-exec-4] (AbstractPoolBackedDataSource.java:462) INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 2, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 10000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge13q9povkhqd1tdml4h|19d75737, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge13q9povkhqd1tdml4h|19d75737, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/shopping0718?useUnicode=true&characterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2017-07-19 15:04:20,161 68029 [http-bio-8080-exec-7] (_Log4jLoggerFactory.java:59) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "include/header.ftl" at line 4, column 14]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #if user  [in template "include/header.ftl" at line 4, column 9]
+	- Reached through: #include "include/header.ftl"  [in template "index.ftl" at line 6, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:80)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:43)
+	at freemarker.core.NonBooleanException.<init>(NonBooleanException.java:47)
+	at freemarker.core.Expression.modelToBoolean(Expression.java:163)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:146)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:131)
+	at freemarker.core.IfBlock.accept(IfBlock.java:49)
+	at freemarker.core.Environment.visit(Environment.java:326)
+	at freemarker.core.Environment.visit(Environment.java:332)
+	at freemarker.core.Environment.include(Environment.java:2508)
+	at freemarker.core.Include.accept(Include.java:171)
+	at freemarker.core.Environment.visit(Environment.java:326)
+	at freemarker.core.Environment.visit(Environment.java:332)
+	at freemarker.core.Environment.process(Environment.java:305)
+	at freemarker.template.Template.process(Template.java:378)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:04:38,552 86420 [http-bio-8080-exec-7] (_Log4jLoggerFactory.java:59) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> RequestParameters['type']  [in template "index.ftl" at line 7, column 21]
+
+----
+Tip: It's the final [] step that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = RequestParameters[...  [in template "index.ftl" at line 7, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134)
+	at freemarker.core.Assignment.accept(Assignment.java:139)
+	at freemarker.core.Environment.visit(Environment.java:326)
+	at freemarker.core.Environment.visit(Environment.java:332)
+	at freemarker.core.Environment.process(Environment.java:305)
+	at freemarker.template.Template.process(Template.java:378)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:06:06,892 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 15:06:06,925 33   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:06:06 CST 2017]; root of context hierarchy
+2017-07-19 15:06:06,995 103  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 15:06:07,853 961  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 15:06:08,124 1232 [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 15:06:08,695 1803 [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 15:06:08,853 1961 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 15:06:13,910 7018 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 15:06:14,892 8000 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 15:06:14,894 8002 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 15:06:14,896 8004 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 15:06:14,898 8006 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 15:06:15,401 8509 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:06:06 CST 2017]; root of context hierarchy
+2017-07-19 15:06:15,525 8633 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:06:06 CST 2017]; root of context hierarchy
+2017-07-19 15:06:15,637 8745 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 15:06:15,802 8910 [localhost-startStop-1] (FreeMarkerConfigurer.java:127) INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-19 15:06:16,068 9176 [localhost-startStop-1] (FrameworkServlet.java:508) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 9173 ms
+2017-07-19 15:07:13,093 66201 [http-bio-8080-exec-1] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> RequestParameters['type']  [in template "index.ftl" at line 7, column 21]
+
+----
+Tip: It's the final [] step that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = RequestParameters[...  [in template "index.ftl" at line 7, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.Assignment.accept(Assignment.java:136)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:07:50,348 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 15:07:50,370 22   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:07:50 CST 2017]; root of context hierarchy
+2017-07-19 15:07:50,411 63   [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 15:07:50,879 531  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 15:07:51,008 660  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 15:07:51,305 957  [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 15:07:51,399 1051 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 15:07:56,448 6100 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 15:07:57,219 6871 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 15:07:57,221 6873 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 15:07:57,222 6874 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 15:07:57,223 6875 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 15:07:57,746 7398 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:07:50 CST 2017]; root of context hierarchy
+2017-07-19 15:07:57,829 7481 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:07:50 CST 2017]; root of context hierarchy
+2017-07-19 15:07:57,921 7573 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 15:07:58,074 7726 [localhost-startStop-1] (FreeMarkerConfigurer.java:127) INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-19 15:07:58,235 7887 [localhost-startStop-1] (FrameworkServlet.java:508) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 7885 ms
+2017-07-19 15:08:27,031 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 15:08:27,064 33   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:08:27 CST 2017]; root of context hierarchy
+2017-07-19 15:08:27,112 81   [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 15:08:27,323 292  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 15:08:27,449 418  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 15:08:27,918 887  [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 15:08:28,060 1029 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 15:08:33,121 6090 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 15:08:34,091 7060 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 15:08:34,095 7064 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 15:08:34,096 7065 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 15:08:34,097 7066 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 15:08:34,621 7590 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:08:27 CST 2017]; root of context hierarchy
+2017-07-19 15:08:34,703 7672 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:08:27 CST 2017]; root of context hierarchy
+2017-07-19 15:08:34,794 7763 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 15:08:34,930 7899 [localhost-startStop-1] (FreeMarkerConfigurer.java:127) INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-19 15:08:35,090 8059 [localhost-startStop-1] (FrameworkServlet.java:508) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 8056 ms
+2017-07-19 15:08:35,538 8507 [http-bio-8080-exec-1] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> RequestParameters['type']  [in template "index.ftl" at line 7, column 21]
+
+----
+Tip: It's the final [] step that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = RequestParameters[...  [in template "index.ftl" at line 7, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.Assignment.accept(Assignment.java:136)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:08:43,985 16954 [http-bio-8080-exec-4] (AbstractPoolBackedDataSource.java:462) INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 2, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 10000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge13q9povr8bb14p4w5m|6f18ce0d, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge13q9povr8bb14p4w5m|6f18ce0d, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/shopping0718?useUnicode=true&characterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2017-07-19 15:09:59,425 92394 [http-bio-8080-exec-8] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "index.ftl" at line 8, column 21]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = user.usertype  [in template "index.ftl" at line 8, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:77)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:40)
+	at freemarker.core.NonHashException.<init>(NonHashException.java:46)
+	at freemarker.core.Dot._eval(Dot.java:45)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:10:33,442 126411 [http-bio-8080-exec-8] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "index.ftl" at line 8, column 21]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = user[usertype]  [in template "index.ftl" at line 8, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.DynamicKeyName._eval(DynamicKeyName.java:54)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:10:45,745 138714 [http-bio-8080-exec-8] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "index.ftl" at line 8, column 21]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = user["usertype"]  [in template "index.ftl" at line 8, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.DynamicKeyName._eval(DynamicKeyName.java:54)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:10:55,377 148346 [http-bio-8080-exec-8] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "index.ftl" at line 8, column 21]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = user["usertype"]??  [in template "index.ftl" at line 8, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.DynamicKeyName._eval(DynamicKeyName.java:54)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.ExistsExpression._eval(ExistsExpression.java:45)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:13:08,449 281418 [http-bio-8080-exec-9] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "index.ftl" at line 8, column 21]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = user.usertype??  [in template "index.ftl" at line 8, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:77)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:40)
+	at freemarker.core.NonHashException.<init>(NonHashException.java:46)
+	at freemarker.core.Dot._eval(Dot.java:45)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.ExistsExpression._eval(ExistsExpression.java:45)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:13:09,979 282948 [http-bio-8080-exec-9] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "index.ftl" at line 8, column 21]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = user.usertype??  [in template "index.ftl" at line 8, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:77)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:40)
+	at freemarker.core.NonHashException.<init>(NonHashException.java:46)
+	at freemarker.core.Dot._eval(Dot.java:45)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.ExistsExpression._eval(ExistsExpression.java:45)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:13:18,919 291888 [http-bio-8080-exec-9] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+For "." left-hand operand: Expected a hash, but this has evaluated to a boolean (wrapper: f.t.FalseTemplateBooleanModel):
+==> user??  [in template "index.ftl" at line 8, column 21]
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #assign listType = user??.usertype??  [in template "index.ftl" at line 8, column 1]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.NonHashException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.Dot._eval(Dot.java:45)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.ExistsExpression._eval(ExistsExpression.java:45)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:13:41,597 314566 [http-bio-8080-exec-7] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "index.ftl" at line 14, column 22]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #if user && user.usertype == 0  [in template "index.ftl" at line 14, column 17]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:77)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:40)
+	at freemarker.core.NonBooleanException.<init>(NonBooleanException.java:44)
+	at freemarker.core.Expression.modelToBoolean(Expression.java:142)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:125)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:110)
+	at freemarker.core.AndExpression.evalToBoolean(AndExpression.java:32)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:46)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:14:04,480 337449 [http-bio-8080-exec-7] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> productList  [in template "index.ftl" at line 18, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #if !productList || !productList?has_...  [in template "index.ftl" at line 18, column 5]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:77)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:40)
+	at freemarker.core.NonBooleanException.<init>(NonBooleanException.java:44)
+	at freemarker.core.Expression.modelToBoolean(Expression.java:142)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:125)
+	at freemarker.core.Expression.evalToBoolean(Expression.java:110)
+	at freemarker.core.NotExpression.evalToBoolean(NotExpression.java:30)
+	at freemarker.core.OrExpression.evalToBoolean(OrExpression.java:32)
+	at freemarker.core.IfBlock.accept(IfBlock.java:46)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 15:37:52,644 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 15:37:52,692 48   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:37:52 CST 2017]; root of context hierarchy
+2017-07-19 15:37:52,740 96   [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 15:37:53,332 688  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 15:37:53,453 809  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 15:37:53,861 1217 [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 15:37:53,948 1304 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 15:37:58,992 6348 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 15:37:59,979 7335 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 15:37:59,981 7337 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 15:37:59,983 7339 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 15:37:59,986 7342 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 15:38:00,796 8152 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:37:52 CST 2017]; root of context hierarchy
+2017-07-19 15:38:00,964 8320 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 15:37:52 CST 2017]; root of context hierarchy
+2017-07-19 15:38:01,108 8464 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 15:38:01,315 8671 [localhost-startStop-1] (FreeMarkerConfigurer.java:127) INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-19 15:38:01,514 8870 [localhost-startStop-1] (FrameworkServlet.java:508) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 8846 ms
+2017-07-19 15:38:10,036 17392 [http-bio-8080-exec-1] (AbstractPoolBackedDataSource.java:462) INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 2, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 10000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge13q9powt2vbd1k8xu|1a53ae4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge13q9powt2vbd1k8xu|1a53ae4, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/shopping0718?useUnicode=true&characterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2017-07-19 16:28:18,438 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 16:28:18,470 32   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 16:28:18 CST 2017]; root of context hierarchy
+2017-07-19 16:28:18,521 83   [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 16:28:19,089 651  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 16:28:19,266 828  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 16:28:20,089 1651 [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 16:28:20,266 1828 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 16:28:25,355 6917 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 16:28:26,438 8000 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 16:28:26,442 8004 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 16:28:26,444 8006 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 16:28:26,445 8007 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 16:28:26,446 8008 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/login]}" onto public org.springframework.web.servlet.ModelAndView com.zhangyifa.shopping.web.PersonController.apilogin(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 16:28:27,060 8622 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 16:28:18 CST 2017]; root of context hierarchy
+2017-07-19 16:28:27,140 8702 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 16:28:18 CST 2017]; root of context hierarchy
+2017-07-19 16:28:27,230 8792 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 16:28:27,458 9020 [localhost-startStop-1] (FreeMarkerConfigurer.java:127) INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-19 16:28:27,789 9351 [localhost-startStop-1] (FrameworkServlet.java:508) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 9348 ms
+2017-07-19 16:28:28,214 9776 [http-bio-8080-exec-1] (_Log4jLoggerFactory.java:60) ERROR freemarker.runtime - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> msg  [in template "login.ftl" at line 27, column 8]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${msg}  [in template "login.ftl" at line 27, column 6]
+
+----
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:355)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:41)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-07-19 16:36:31,117 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 16:36:31,226 109  [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 16:36:31 CST 2017]; root of context hierarchy
+2017-07-19 16:36:31,572 455  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 16:36:32,287 1170 [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 16:36:32,843 1726 [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 16:36:33,973 2856 [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 16:36:34,158 3041 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 16:36:39,482 8365 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 16:36:41,521 10404 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 16:36:41,523 10406 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 16:36:41,524 10407 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 16:36:41,525 10408 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 16:36:41,526 10409 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/login]}" onto public org.springframework.web.servlet.ModelAndView com.zhangyifa.shopping.web.PersonController.apilogin(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 16:36:42,448 11331 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 16:36:31 CST 2017]; root of context hierarchy
+2017-07-19 16:36:42,635 11518 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 16:36:31 CST 2017]; root of context hierarchy
+2017-07-19 16:36:42,878 11761 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 16:36:43,187 12070 [localhost-startStop-1] (FreeMarkerConfigurer.java:127) INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-19 16:36:43,514 12397 [localhost-startStop-1] (FrameworkServlet.java:508) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 12379 ms
+2017-07-19 17:09:00,624 2442186 [localhost-startStop-2] (AbstractApplicationContext.java:987) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 16:28:18 CST 2017]; root of context hierarchy
+2017-07-19 17:13:46,741 0    [localhost-startStop-1] (FrameworkServlet.java:489) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization started
+2017-07-19 17:13:46,779 38   [localhost-startStop-1] (AbstractApplicationContext.java:582) INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 17:13:46 CST 2017]; root of context hierarchy
+2017-07-19 17:13:46,828 87   [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-dao.xml]
+2017-07-19 17:13:47,277 536  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-service.xml]
+2017-07-19 17:13:47,441 700  [localhost-startStop-1] (XmlBeanDefinitionReader.java:317) INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/zyf/Documents/IdeaCode/MySampleCode/Shopping/target/classes/spring/spring-web.xml]
+2017-07-19 17:13:47,782 1041 [localhost-startStop-1] (AutowiredAnnotationBeanPostProcessor.java:155) INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-19 17:13:47,881 1140 [localhost-startStop-1] (MLog.java:80) INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2017-07-19 17:13:52,927 6186 [localhost-startStop-1] (C3P0Registry.java:204) INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2017-07-19 17:13:54,065 7324 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{folder}/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goURL(java.lang.String,java.lang.String)
+2017-07-19 17:13:54,071 7330 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/base/goURL/{file}]}" onto public java.lang.String com.zhangyifa.shopping.web.BaseController.goOneURL(java.lang.String)
+2017-07-19 17:13:54,075 7334 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/index]}" onto public java.lang.String com.zhangyifa.shopping.web.IndexController.index()
+2017-07-19 17:13:54,078 7337 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.zhangyifa.shopping.web.PersonController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 17:13:54,087 7346 [localhost-startStop-1] (AbstractHandlerMethodMapping.java:543) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/login]}" onto public org.springframework.web.servlet.ModelAndView com.zhangyifa.shopping.web.PersonController.apilogin(com.zhangyifa.shopping.entity.Person,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
+2017-07-19 17:13:54,630 7889 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 17:13:46 CST 2017]; root of context hierarchy
+2017-07-19 17:13:54,721 7980 [localhost-startStop-1] (RequestMappingHandlerAdapter.java:534) INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Wed Jul 19 17:13:46 CST 2017]; root of context hierarchy
+2017-07-19 17:13:54,818 8077 [localhost-startStop-1] (AbstractUrlHandlerMapping.java:362) INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2017-07-19 17:13:55,015 8274 [localhost-startStop-1] (FreeMarkerConfigurer.java:127) INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-19 17:13:55,208 8467 [localhost-startStop-1] (FrameworkServlet.java:508) INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'SpringMVC': initialization completed in 8459 ms
