@@ -34,5 +34,8 @@ time bigint comment '购买时间')
 ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 -- 用户数据：
+-- 买家用户：buyer，密码：reyub
+-- 卖家用户：seller，密码：relles
 insert into `person` (`user_name`, `pass_word`, `nick_name`, `user_type`) values('buyer','37254660e226ea65ce6f1efd54233424','buyer','0');
 insert into `person` (`user_name`, `pass_word`, `nick_name`, `user_type`) values('seller','981c57a5cfb0f868e064904b8745766f','seller','1');
+

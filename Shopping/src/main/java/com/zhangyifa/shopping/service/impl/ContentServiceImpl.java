@@ -7,6 +7,9 @@ import com.zhangyifa.shopping.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * Created by zyf on 2017/7/18.
  */
@@ -17,23 +20,33 @@ public class ContentServiceImpl implements ContentService{
     private ContentDao contentDao;
 
     @Override
-    public int insert(Content entity) throws Exception {
+    public Integer insert(Content entity) throws Exception {
         return contentDao.insert(entity);
     }
 
     @Override
-    public int update(Content entity) throws Exception {
+    public Integer update(Content entity) throws Exception {
         return contentDao.update(entity);
     }
 
     @Override
-    public int delete(Content entity) throws Exception {
+    public Integer delete(Content entity) throws Exception {
         return contentDao.delete(entity);
     }
 
     @Override
-    public int deleteList(String[] pks) throws Exception {
+    public Integer deleteList(String[] pks) throws Exception {
         return contentDao.deleteList(pks);
+    }
+
+    @Override
+    public List<Content> selectAll() {
+        return contentDao.selectAll();
+    }
+
+    @Override
+    public Content selectById(Serializable id) {
+        return contentDao.selectById(id);
     }
 
     @Override

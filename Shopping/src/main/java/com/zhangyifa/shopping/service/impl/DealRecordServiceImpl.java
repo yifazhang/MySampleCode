@@ -7,6 +7,9 @@ import com.zhangyifa.shopping.service.DealRecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * Created by zyf on 2017/7/18.
  */
@@ -17,23 +20,33 @@ public class DealRecordServiceImpl implements DealRecordService {
     private DealRecordDao dealRecordDao;
 
     @Override
-    public int insert(DealRecord entity) throws Exception {
+    public Integer insert(DealRecord entity) throws Exception {
         return dealRecordDao.insert(entity);
     }
 
     @Override
-    public int update(DealRecord entity) throws Exception {
+    public Integer update(DealRecord entity) throws Exception {
         return dealRecordDao.update(entity);
     }
 
     @Override
-    public int delete(DealRecord entity) throws Exception {
+    public Integer delete(DealRecord entity) throws Exception {
         return dealRecordDao.delete(entity);
     }
 
     @Override
-    public int deleteList(String[] pks) throws Exception {
+    public Integer deleteList(String[] pks) throws Exception {
         return dealRecordDao.deleteList(pks);
+    }
+
+    @Override
+    public List<DealRecord> selectAll() {
+        return null;
+    }
+
+    @Override
+    public DealRecord selectById(Serializable id) {
+        return dealRecordDao.selectById(id);
     }
 
     @Override

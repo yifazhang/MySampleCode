@@ -6,7 +6,7 @@
         form.submit();
     }
 </script>
-    <form method="post" action="/index">
+    <form method="get" action="/">
     </form>
 </body>
 </html>

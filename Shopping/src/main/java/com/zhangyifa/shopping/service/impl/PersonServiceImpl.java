@@ -8,6 +8,9 @@ import com.zhangyifa.shopping.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * Created by zyf on 2017/7/18.
  */
@@ -23,23 +26,33 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public int insert(Person entity) throws Exception {
-        return 0;
+    public Integer insert(Person entity) throws Exception {
+        return null;
     }
 
     @Override
-    public int update(Person entity) throws Exception {
-        return 0;
+    public Integer update(Person entity) throws Exception {
+        return null;
     }
 
     @Override
-    public int delete(Person entity) throws Exception {
-        return 0;
+    public Integer delete(Person entity) throws Exception {
+        return null;
     }
 
     @Override
-    public int deleteList(String[] pks) throws Exception {
-        return 0;
+    public Integer deleteList(String[] pks) throws Exception {
+        return null;
+    }
+
+    @Override
+    public List<Person> selectAll() {
+        return null;
+    }
+
+    @Override
+    public Person selectById(Serializable id) {
+        return personDao.selectById(id);
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.zhangyifa.shopping.dao;
 
 import com.zhangyifa.shopping.entity.Page;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -10,19 +11,25 @@ import java.util.List;
 public interface BaseDao<T> {
 
     //添加单个对象
-    public int insert(T entity);
+    public Integer insert(T entity);
 
     //修改单个对象
-    public int update(T entity);
+    public Integer update(T entity);
 
     //删除单个对象
-    public int delete(T entity);
+    public Integer delete(T entity);
 
     //通过主键（数组）批量删除数据
-    public int deleteList(String [] pks);
+    public Integer deleteList(String [] pks);
+
+    //查询单个对象
+    public T selectById(Serializable id);
 
     //查询单个对象
     public T select(T entity);
+
+    //查询所有
+    public List<T> selectAll();
 
     //通过关键字分页查询数据列表
     public List<T> selectPageList(Page<T> page);

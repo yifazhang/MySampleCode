@@ -1,24 +1,27 @@
 (function(w,d,u){
-    alert("44444");
 	var loginForm = util.get('loginForm');
 	if(!loginForm){
 		return;
 	}
 	var userName = loginForm['userName'];
-	var password = loginForm['password'];
+	var password = loginForm['passWord'];
+	console.log(userName);
+	console.log(password);
 	var isSubmiting = false;
 	var loading = new Loading();
 	var page = {
 		init:function(){
 			loginForm.addEventListener('submit',function(e){
 				if(!isSubmiting && this.check()){
-					alert("1111");
 					var value1 = userName.value;
 					var value2 = md5(password.value);
+
+                    console.log(value1);
+                    console.log(value2);
 					isSubmiting = true;
 					loading.show();
 					ajax({
-						data:{userName:value1,password:value2},
+						data:{userName:value1,passWord:value2},
 						url:'/api/login',
 						success:function(result){
 							loading.hide();
@@ -38,7 +41,6 @@
 			}.bind(this));
 		},
 		check:function(){
-            alert("222");
 			var result = true;
 			[
 				[userName,function(value){return value == ''}],
@@ -55,5 +57,4 @@
 		}
 	};
 	page.init();
-    alert("3333");
 })(window,document);

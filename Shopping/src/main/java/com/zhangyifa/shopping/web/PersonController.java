@@ -36,17 +36,17 @@ public class PersonController {
     @ResponseBody
     public ResponseEntity<Result> apilogin(Person person, HttpServletRequest request, HttpSession session) {
         Person loginPerson = personService.login(person);
-        System.out.println(loginPerson);
-        System.out.println("------------");
+        System.out.println("---------------------");
         System.out.println(person);
-
+        System.out.println(loginPerson);
+        System.out.println("---------------------");
         if (loginPerson != null) {
             session.setAttribute("user",loginPerson);
             Result result = new Result(HttpStatus.OK.value(),"登录成功！",true);
             return new ResponseEntity<Result>(result, HttpStatus.OK);
 
         } else {
-            Result result = new Result(HttpStatus.OK.value(),"用户名或密码错误！",false);
+            Result result = new Result(HttpStatus.BAD_REQUEST.value(),"用户名或密码错误！",false);
             return new ResponseEntity<Result>(result, HttpStatus.OK);
 
         }
