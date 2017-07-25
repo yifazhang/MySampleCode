@@ -9,13 +9,11 @@ public class Content implements Serializable {
 
 
    private int id;
-   private long price;
+   private double price;
    private String title;
    private String image;
-   private String icon;
    private String summary;
    private String detail;
-   private String pic;
 
    private boolean buy;
    private boolean sell;
@@ -28,11 +26,11 @@ public class Content implements Serializable {
         this.id = id;
     }
 
-    public long getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(long price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -52,14 +50,6 @@ public class Content implements Serializable {
         this.image = image;
     }
 
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
     public String getSummary() {
         return summary;
     }
@@ -74,14 +64,6 @@ public class Content implements Serializable {
 
     public void setDetail(String detail) {
         this.detail = detail;
-    }
-
-    public String getPic() {
-        return pic;
-    }
-
-    public void setPic(String pic) {
-        this.pic = pic;
     }
 
     public boolean isBuy() {
@@ -107,10 +89,8 @@ public class Content implements Serializable {
                 ", price=" + price +
                 ", title='" + title + '\'' +
                 ", image='" + image + '\'' +
-                ", icon='" + icon + '\'' +
                 ", summary='" + summary + '\'' +
                 ", detail='" + detail + '\'' +
-                ", pic='" + pic + '\'' +
                 ", buy=" + buy +
                 ", sell=" + sell +
                 '}';

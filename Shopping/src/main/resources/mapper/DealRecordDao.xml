@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zhangyifa.shopping.dao.DealRecordDao">
+
+    <!-- 新增记录-->
+    <insert id="insert" keyProperty="id">
+        INSERT INTO trx (content_id, person_id, price, num)
+        VALUES (#{contentId},#{personId},#{price},#{num})
+    </insert>
+
+    <!-- 查询所有记录 -->
+    <select id="selectAll" >
+        SELECT t.id, t.price,t.content_id, t.person_id, t.time , t.num FROM trx t
+    </select>
+
+    <!-- 查询所有记录 -->
+    <select id="selectByUserId" resultType="DealRecord">
+        SELECT t.id, t.price,t.content_id, t.person_id, t.time , t.num FROM trx t
+        WHERE t.person_id = #{personId}
+    </select>
+
+    <!--&lt;!&ndash; 查询单个产品 &ndash;&gt;-->
+    <!--<select id="selectById" resultMap="resutProduct">-->
+        <!--SELECT c.id, c.price,c.title, c.image, c.summary , c.detail FROM content c-->
+        <!--WHERE c.id = #{id}-->
+    <!--</select>-->
+
+    <!--&lt;!&ndash; 删除单个产品 &ndash;&gt;-->
+    <!--<delete id="delete" >-->
+        <!--DELETE FROM content WHERE id = #{id}-->
+    <!--</delete>-->
+
+    <!--&lt;!&ndash; 修改单个产品 &ndash;&gt;-->
+    <!--<update id="update" >-->
+        <!--UPDATE content AS c SET c.price = #{price},c.title = #{title} , c.image = #{image}, c.summary = #{summary} , c.detail = #{detail}-->
+        <!--WHERE id = #{id}-->
+    <!--</update>-->
+
+
+
+</mapper>

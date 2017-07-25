@@ -1,6 +1,7 @@
 package com.zhangyifa.shopping.entity;
 
-import java.util.Date;
+
+import java.sql.Timestamp;
 
 /**
  * Created by zyf on 2017/7/18.
@@ -9,14 +10,15 @@ public class DealRecord {
 
     private int id;
     private int contentId;
+    private int num;//数量
     private int personId;
-    private int price;
-    private Date time;
+    private double price;
+    private Timestamp time;
 
     public DealRecord() {
     }
 
-    public DealRecord(int contentId, int personId, int price, Date time) {
+    public DealRecord(int contentId, int personId, int price, Timestamp time) {
         this.contentId = contentId;
         this.personId = personId;
         this.price = price;
@@ -47,27 +49,36 @@ public class DealRecord {
         this.personId = personId;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public Date getTime() {
+    public Timestamp getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(Timestamp time) {
         this.time = time;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
     }
 
     @Override
     public String toString() {
-        return "DealRecordDao{" +
+        return "DealRecord{" +
                 "id=" + id +
                 ", contentId=" + contentId +
+                ", num=" + num +
                 ", personId=" + personId +
                 ", price=" + price +
                 ", time=" + time +

@@ -67,4 +67,9 @@ public class DealRecordServiceImpl implements DealRecordService {
         page.setTotalRecord(dealRecordDao.selectPageCountUseDyc(page));
         return page;
     }
+
+    @Override
+    public List<DealRecord> selectByUserId(Serializable id) {
+        return dealRecordDao.selectByUserId(id);
+    }
 }

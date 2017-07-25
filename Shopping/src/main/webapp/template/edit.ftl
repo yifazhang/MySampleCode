@@ -7,11 +7,8 @@
     <div class="m-tab m-tab-fw m-tab-simple f-cb">
         <h2>内容编辑</h2>
     </div>
-    <#if !product>
-    <div class="n-result">
-        <h3>内容不存在！</h3>
-    </div>
-    <#else>
+    <#if product??>
+
     <div class="n-public">
         <form class="m-form m-form-ht" id="form" method="post" action="/editSubmit?id=${product.id}" onsubmit="return false;" autocomplete="off">
             <div class="fmitem">
@@ -37,7 +34,7 @@
             <div class="fmitem">
                 <label class="fmlab"></label>
                 <div class="fmipt" id="urlUpload">
-                    <input class="u-ipt ipt"  name="image" placeholder="图片地址"/>
+                    <input class="u-ipt ipt"  name="image" value="${product.image}" placeholder="图片地址"/>
                 </div>
                 <div class="fmipt" id="fileUpload"  style="display:none">
                     <input class="u-ipt ipt" name="file" type="file" id="fileUp"/>
@@ -64,7 +61,14 @@
         </form>
         <span class="imgpre"><img src="${product.image}" alt="" id="imgpre"></span>
     </div>
+    <#else>
+        <div class="n-result">
+            <h3>内容不存在！</h3>
+        </div>
+
     </#if>
+
+
 </div>
 <#include "include/footer.ftl">
 <script type="text/javascript" src="/js/global.js"></script>

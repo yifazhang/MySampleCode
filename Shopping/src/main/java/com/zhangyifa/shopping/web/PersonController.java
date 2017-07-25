@@ -32,6 +32,12 @@ public class PersonController {
         }
     }
 
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest request, HttpSession session) {
+       session.removeAttribute("user");
+       return "login";
+    }
+
     @RequestMapping("/api/login")
     @ResponseBody
     public ResponseEntity<Result> apilogin(Person person, HttpServletRequest request, HttpSession session) {

@@ -10,22 +10,34 @@
     </resultMap>
 
     <!-- 新增产品 -->
-    <insert id="insert" >
-        INSERT INTO content (price, title, icon, abstract, text)
-        VALUES (#{price},#{title},#{icon},#{summary},#{detail})
+    <insert id="insert" keyProperty="id">
+        INSERT INTO content (price, title, image, summary, detail)
+        VALUES (#{price},#{title},#{image},#{summary},#{detail})
     </insert>
 
     <!-- 查询所有产品 -->
     <select id="selectAll" resultMap="resutProduct">
-        SELECT c.id, c.price,c.title, c.icon, c.abstract AS summary , c.text AS detail FROM content c
+        SELECT c.id, c.price,c.title, c.image, c.summary , c.detail FROM content c
     </select>
 
 
     <!-- 查询单个产品 -->
     <select id="selectById" resultMap="resutProduct">
-        SELECT c.id, c.price,c.title, c.icon, c.abstract AS summary , c.text AS detail  FROM content c
+        SELECT c.id, c.price,c.title, c.image, c.summary , c.detail FROM content c
         WHERE c.id = #{id}
     </select>
+
+    <!-- 删除单个产品 -->
+    <delete id="delete" >
+        DELETE FROM content WHERE id = #{id}
+    </delete>
+
+    <!-- 修改单个产品 -->
+    <update id="update" >
+        UPDATE content AS c SET c.price = #{price},c.title = #{title} , c.image = #{image}, c.summary = #{summary} , c.detail = #{detail}
+        WHERE id = #{id}
+    </update>
+
 
 
 </mapper>

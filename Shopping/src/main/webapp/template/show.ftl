@@ -8,17 +8,17 @@
     <#if product??>
 
     <div class="n-show f-cb" id="showContent">
-        <div class="img"><img src="${product.icon}" alt="" ></div>
+        <div class="img"><img src="${product.image}" alt="" ></div>
         <div class="cnt">
             <h2>${product.title}</h2>
             <p class="summary">${product.summary}</p>
             <div class="price">
                 <span class="v-unit">¥</span><span class="v-value">${product.price}</span>
             </div>
-            <div class="num">购买数量：<span id="plusNum" class="lessNum"><a>-</a></span><span class="totalNum" id="allNum">${product.buyNum!0}</span><span id="addNum" class="moreNum"><a>+</a></span></div>
+            <div class="num">购买数量：<span id="plusNum" class="lessNum"><a>-</a></span><span class="totalNum" id="allNum">${product.buyNum!1}</span><span id="addNum" class="moreNum"><a>+</a></span></div>
             <div class="oprt f-cb">
                 <#if user?? && user.userType==0>
-                    <#if product.isBuy??>
+                    <#if product.buy>
                     <span class="u-btn u-btn-primary z-dis">已购买</span>
                     <span class="buyprice">当时购买价格：¥${product.buyPrice}</span>
                     <#else>
