@@ -2,7 +2,6 @@ package com.zhangyifa.shopping.service.impl;
 
 import com.zhangyifa.shopping.dao.DealRecordDao;
 import com.zhangyifa.shopping.entity.DealRecord;
-import com.zhangyifa.shopping.entity.Page;
 import com.zhangyifa.shopping.service.DealRecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,11 +34,6 @@ public class DealRecordServiceImpl implements DealRecordService {
     }
 
     @Override
-    public Integer deleteList(String[] pks) throws Exception {
-        return dealRecordDao.deleteList(pks);
-    }
-
-    @Override
     public List<DealRecord> selectAll() {
         return null;
     }
@@ -55,21 +49,12 @@ public class DealRecordServiceImpl implements DealRecordService {
     }
 
     @Override
-    public Page<DealRecord> selectPage(Page<DealRecord> page) {
-        page.setList(dealRecordDao.selectPageList(page));
-        page.setTotalRecord(dealRecordDao.selectPageCount(page));
-        return page;
+    public List<DealRecord> selectByItem(DealRecord dealRecord) {
+        return dealRecordDao.selectByItem(dealRecord);
     }
 
     @Override
-    public Page<DealRecord> selectPageUseDyc(Page<DealRecord> page) {
-        page.setList(dealRecordDao.selectPageListUseDyc(page));
-        page.setTotalRecord(dealRecordDao.selectPageCountUseDyc(page));
-        return page;
-    }
-
-    @Override
-    public List<DealRecord> selectByUserId(Serializable id) {
-        return dealRecordDao.selectByUserId(id);
+    public Integer selectNumCountByItem(DealRecord dealRecord) {
+        return dealRecordDao.selectNumCountByItem(dealRecord);
     }
 }

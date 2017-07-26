@@ -63,8 +63,11 @@ public class TraditionController {
 
         Person user = (Person)session.getAttribute("user");
         if (user == null) return "redirect:login";
+        DealRecord dealRecord = new DealRecord();
+        dealRecord.setContentId(-1);
+        dealRecord.setPersonId(user.getId());
 
-        List<DealRecord> buyListStart = dealRecordService.selectByUserId(user.getId());
+        List<DealRecord> buyListStart = dealRecordService.selectByItem(dealRecord);
         List<ProductDTO> buyList = new ArrayList<>();
         for (DealRecord d: buyListStart ) {
             ProductDTO p = new ProductDTO();

@@ -33,32 +33,38 @@ public class ContentController {
     @Autowired
     DealRecordService dealRecordService;
 
-    @RequestMapping({"/","/index"})
-    public String index(Integer type , Model model) {
+    @RequestMapping({"/", "/index"})
+    public String index(Integer type, Model model, HttpSession session) {
         List<Content> productList = contentService.selectAll();
-        model.addAttribute("productList",productList);
-        if (type != null && type == 1) {
-            model.addAttribute("type",1);
-        } else {
-            model.addAttribute("type",0);
+        List<ProductDTO> endList = new ArrayList<>();
+        for (Content c : productList) {
+            ProductDTO p = setProductDTOData(c,session);
+            endList.add(p);
         }
-        System.out.println(productList.toString());
+
+        model.addAttribute("productList", endList);
+
+        if (type != null && type == 1) {
+            model.addAttribute("type", 1);
+        } else {
+            model.addAttribute("type", 0);
+        }
+        model.addAttribute("title","首页");
         return "index";
     }
-
 
     @RequestMapping(value = "/public")
     public String publicUI() {
         return "public";
     }
 
-    @RequestMapping(value = "/publicSubmit",method = RequestMethod.POST)
+    @RequestMapping(value = "/publicSubmit", method = RequestMethod.POST)
     public String publicSubmit(Content content, Model model) {
         try {
-          int i = contentService.insert(content);
-          if (i > 0) {
-            model.addAttribute("product",content);
-          }
+            int i = contentService.insert(content);
+            if (i > 0) {
+                model.addAttribute("product", content);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -66,20 +72,20 @@ public class ContentController {
     }
 
     @RequestMapping("/edit")
-    public String contentEdit(@RequestParam("id") Integer id , Model model) {
+    public String contentEdit(@RequestParam("id") Integer id, Model model) {
         Content product = contentService.selectById(id);
-        model.addAttribute("product",product);
+        model.addAttribute("product", product);
         return "edit";
     }
 
     @RequestMapping("/editSubmit")
-    public String contentEditSubmit(@RequestParam("id") Integer id,Content content , Model model) {
+    public String contentEditSubmit(@RequestParam("id") Integer id, Content content, Model model) {
         content.setId(id);
         Content product = null;
         try {
             Integer i = contentService.update(content);
             if (i > 0) {
-                model.addAttribute("product",content);
+                model.addAttribute("product", content);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -87,53 +93,17 @@ public class ContentController {
         return "editSubmit";
     }
 
-
-
     @RequestMapping("/show")
-    public String showDeatail(@RequestParam("id") Long id , Model model,,HttpSession session) {
+    public String showDeatail(@RequestParam("id") Long id, Model model, HttpSession session) {
 
         Content c = contentService.selectById(id);
-        model.addAttribute("product",c);
-
-//        ProductDTO p = new ProductDTO();
-//        p.setId(c.getId());
-//        p.setTitle(c.getTitle());
-//        p.setImage(c.getImage());
-//        p.setPrice(c.getPrice());
-//
-//        p.setSummary(c.getSummary());
-//        p.setDetail(c.getDetail());
-//        p.setBuyPrice(d.getPrice());
-//        p.setBuyNum(d.getNum());
-//        p.setBuyTime(d.getTime());
-//
-//        Person user = (Person)session.getAttribute("user");
-//        if (user != null) {
-//            List<DealRecord> buyListStart = dealRecordService.selectByUserId(user.getId());
-//            List<ProductDTO> buyList = new ArrayList<>();
-//            for (DealRecord d: buyListStart ) {
-//                ProductDTO p = new ProductDTO();
-//                p.setId(d.getContentId());
-//                Content c = contentService.selectById(d.getContentId());
-//                p.setTitle(c.getTitle());
-//                p.setImage(c.getImage());
-//                p.setPrice(c.getPrice());
-//
-//                p.setSummary(c.getSummary());
-//                p.setDetail(c.getDetail());
-//                p.setBuyPrice(d.getPrice());
-//                p.setBuyNum(d.getNum());
-//                p.setBuyTime(d.getTime());
-//            }
-//        }
-
+        ProductDTO p = setProductDTOData(c,session);
+        model.addAttribute("product", p);
         return "show";
     }
 
-
     @RequestMapping("/settleAccount")
     public String showSettleAccount() {
-
         return "settleAccount";
     }
 
@@ -142,7 +112,7 @@ public class ContentController {
     public ResponseEntity<Result> deleteProduct(Integer id) {
         Content content = new Content();
         content.setId(id);
-        Result result = new Result(HttpStatus.OK.value(),"删除成功！",true);
+        Result result = new Result(HttpStatus.OK.value(), "删除成功！", true);
         try {
             Integer i = contentService.delete(content);
         } catch (Exception e) {
@@ -152,6 +122,45 @@ public class ContentController {
         }
         return new ResponseEntity<Result>(result, HttpStatus.OK);
 
+    }
+
+
+    private ProductDTO setProductDTOData(Content c,HttpSession session){
+        ProductDTO p = new ProductDTO();
+        p.setId(c.getId());
+        p.setTitle(c.getTitle());
+        p.setImage(c.getImage());
+        p.setPrice(c.getPrice());
+
+        p.setSummary(c.getSummary());
+        p.setDetail(c.getDetail());
+
+        Person user = (Person) session.getAttribute("user");
+        if (user != null) {
+            DealRecord dealRecord = new DealRecord();
+            dealRecord.setContentId(c.getId());
+
+            if (user.getUserType() == 0) { //买家
+                dealRecord.setPersonId(user.getId());
+            } else {//卖家
+                dealRecord.setPersonId(-1);
+            }
+
+            List<DealRecord> buyListStart = dealRecordService.selectByItem(dealRecord);
+            //售卖个数
+            Integer num = dealRecordService.selectNumCountByItem(dealRecord);
+            if (buyListStart.size() > 0) {
+                DealRecord d = buyListStart.get(buyListStart.size() - 1);
+                p.setBuyPrice(d.getPrice());
+                p.setBuyNum(d.getNum());
+                p.setBuyTime(d.getTime());
+
+                p.setIsBuy(true);
+                p.setIsSell(true);
+                p.setSellNum(num);
+            }
+        }
+        return p;
     }
 
 }

@@ -20,7 +20,6 @@
         SELECT c.id, c.price,c.title, c.image, c.summary , c.detail FROM content c
     </select>
 
-
     <!-- 查询单个产品 -->
     <select id="selectById" resultMap="resutProduct">
         SELECT c.id, c.price,c.title, c.image, c.summary , c.detail FROM content c

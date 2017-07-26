@@ -40,5 +40,8 @@ ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 insert into `person` (`user_name`, `pass_word`, `nick_name`, `user_type`) values('buyer','37254660e226ea65ce6f1efd54233424','buyer','0');
 insert into `person` (`user_name`, `pass_word`, `nick_name`, `user_type`) values('seller','981c57a5cfb0f868e064904b8745766f','seller','1');
 
-SELECT t.id, t.price,t.content_id, t.person_id, t.time , t.num FROM trx t
-WHERE t.person_id = 1
+SELECT sum(num) FROM trx t
+WHERE t.content_id = 11
+
+
+

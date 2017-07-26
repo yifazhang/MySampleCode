@@ -1,9 +1,7 @@
 package com.zhangyifa.shopping.service.impl;
 
 import com.zhangyifa.shopping.dao.PersonDao;
-import com.zhangyifa.shopping.entity.Page;
 import com.zhangyifa.shopping.entity.Person;
-import com.zhangyifa.shopping.service.BaseService;
 import com.zhangyifa.shopping.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,11 +39,6 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public Integer deleteList(String[] pks) throws Exception {
-        return null;
-    }
-
-    @Override
     public List<Person> selectAll() {
         return null;
     }
@@ -60,13 +53,4 @@ public class PersonServiceImpl implements PersonService {
         return null;
     }
 
-    @Override
-    public Page<Person> selectPage(Page<Person> page) {
-        return null;
-    }
-
-    @Override
-    public Page<Person> selectPageUseDyc(Page<Person> page) {
-        return null;
-    }
 }

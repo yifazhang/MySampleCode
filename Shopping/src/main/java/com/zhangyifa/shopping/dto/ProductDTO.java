@@ -11,8 +11,8 @@ public class ProductDTO {
     private String title; //标题
     private String image;//图片
     private Double price;//价格
-    private Integer isBuy;//当前用户是否已经购买
-    private Integer isSell;//是否已经卖出
+    private boolean isBuy;//当前用户是否已经购买
+    private boolean isSell;//是否已经卖出
     private String summary;//摘要
     private String detail;//全文
     private Double buyPrice;//购买时的价格
@@ -52,19 +52,19 @@ public class ProductDTO {
         this.price = price;
     }
 
-    public Integer getIsBuy() {
+    public boolean getIsBuy() {
         return isBuy;
     }
 
-    public void setIsBuy(Integer isBuy) {
+    public void setIsBuy(boolean isBuy) {
         this.isBuy = isBuy;
     }
 
-    public Integer getIsSell() {
+    public boolean getIsSell() {
         return isSell;
     }
 
-    public void setIsSell(Integer isSell) {
+    public void setIsSell(boolean isSell) {
         this.isSell = isSell;
     }
 

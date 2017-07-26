@@ -42,10 +42,6 @@ public class PersonController {
     @ResponseBody
     public ResponseEntity<Result> apilogin(Person person, HttpServletRequest request, HttpSession session) {
         Person loginPerson = personService.login(person);
-        System.out.println("---------------------");
-        System.out.println(person);
-        System.out.println(loginPerson);
-        System.out.println("---------------------");
         if (loginPerson != null) {
             session.setAttribute("user",loginPerson);
             Result result = new Result(HttpStatus.OK.value(),"登录成功！",true);

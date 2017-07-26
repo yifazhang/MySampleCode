@@ -16,28 +16,29 @@
         SELECT t.id, t.price,t.content_id, t.person_id, t.time , t.num FROM trx t
     </select>
 
-    <!-- 查询所有记录 -->
-    <select id="selectByUserId" resultType="DealRecord">
-        SELECT t.id, t.price,t.content_id, t.person_id, t.time , t.num FROM trx t
-        WHERE t.person_id = #{personId}
+    <!-- 查询购买个数 -->
+    <select id="selectNumCountByItem" resultType="Integer">
+        SELECT sum(t.num) FROM trx t
+        <where>
+            <if test="contentId!=null">
+                AND t.content_id = #{contentId}
+            </if>
+        </where>
     </select>
 
-    <!--&lt;!&ndash; 查询单个产品 &ndash;&gt;-->
-    <!--<select id="selectById" resultMap="resutProduct">-->
-        <!--SELECT c.id, c.price,c.title, c.image, c.summary , c.detail FROM content c-->
-        <!--WHERE c.id = #{id}-->
-    <!--</select>-->
+    <!-- 查询条件记录 -->
+    <select id="selectByItem" resultType="DealRecord">
+        SELECT t.id, t.price,t.content_id, t.person_id, t.time , t.num FROM trx t
+        <where>
+            <if test="personId!=-1">
+                AND t.person_id = #{personId}
+            </if>
+            <if test="contentId!=-1">
+                AND t.content_id = #{contentId}
+            </if>
+        </where>
+    </select>
 
-    <!--&lt;!&ndash; 删除单个产品 &ndash;&gt;-->
-    <!--<delete id="delete" >-->
-        <!--DELETE FROM content WHERE id = #{id}-->
-    <!--</delete>-->
-
-    <!--&lt;!&ndash; 修改单个产品 &ndash;&gt;-->
-    <!--<update id="update" >-->
-        <!--UPDATE content AS c SET c.price = #{price},c.title = #{title} , c.image = #{image}, c.summary = #{summary} , c.detail = #{detail}-->
-        <!--WHERE id = #{id}-->
-    <!--</update>-->
 
 
 
