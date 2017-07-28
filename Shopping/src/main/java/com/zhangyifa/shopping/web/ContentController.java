@@ -7,18 +7,27 @@ import com.zhangyifa.shopping.entity.Person;
 import com.zhangyifa.shopping.entity.Result;
 import com.zhangyifa.shopping.service.ContentService;
 import com.zhangyifa.shopping.service.DealRecordService;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -38,7 +47,7 @@ public class ContentController {
         List<Content> productList = contentService.selectAll();
         List<ProductDTO> endList = new ArrayList<>();
         for (Content c : productList) {
-            ProductDTO p = setProductDTOData(c,session);
+            ProductDTO p = setProductDTOData(c, session);
             endList.add(p);
         }
 
@@ -49,7 +58,7 @@ public class ContentController {
         } else {
             model.addAttribute("type", 0);
         }
-        model.addAttribute("title","首页");
+        model.addAttribute("title", "首页");
         return "index";
     }
 
@@ -97,7 +106,7 @@ public class ContentController {
     public String showDeatail(@RequestParam("id") Long id, Model model, HttpSession session) {
 
         Content c = contentService.selectById(id);
-        ProductDTO p = setProductDTOData(c,session);
+        ProductDTO p = setProductDTOData(c, session);
         model.addAttribute("product", p);
         return "show";
     }
@@ -125,7 +134,33 @@ public class ContentController {
     }
 
 
-    private ProductDTO setProductDTOData(Content c,HttpSession session){
+    @RequestMapping(value = "/api/upload", method = RequestMethod.POST)
+    @ResponseBody
+    public ModelMap upload(@RequestParam("file") MultipartFile file, HttpServletRequest request, ModelMap modelMap) {
+
+        if (!file.isEmpty()) {
+            String fileName = System.currentTimeMillis() + file.getOriginalFilename();
+            String contextPath = request.getServletContext().getRealPath("/")+"image" ;
+            System.out.println(contextPath);
+            File file1 = new File(contextPath, fileName);
+            try {
+                FileUtils.copyInputStreamToFile(file.getInputStream(), file1);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            modelMap.addAttribute("code", 200);
+            modelMap.addAttribute("message", "success");
+            modelMap.addAttribute("result", "/image/"+fileName);
+        } else {
+            modelMap.addAttribute("code", 400);
+            modelMap.addAttribute("message", "failed");
+            modelMap.addAttribute("result", null);
+        }
+
+        return modelMap;
+    }
+
+    private ProductDTO setProductDTOData(Content c, HttpSession session) {
         ProductDTO p = new ProductDTO();
         p.setId(c.getId());
         p.setTitle(c.getTitle());

@@ -21,6 +21,35 @@
         <property name="defaultContentType" value="application/json"/>
     </bean>
 
+    <mvc:interceptors>
+        <!-- 登录权限 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/"/>
+            <mvc:exclude-mapping path="/show"/>
+            <mvc:exclude-mapping path="/index"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/api/login"/>
+            <bean class="com.zhangyifa.shopping.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+
+        <!-- 卖家权限 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/public"/>
+            <mvc:mapping path="/edit"/>
+            <bean class="com.zhangyifa.shopping.interceptor.SellAuthorityInterceptor"/>
+        </mvc:interceptor>
+
+        <!-- 买家权限 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/account"/>
+            <mvc:mapping path="/settleAccount"/>
+            <bean class="com.zhangyifa.shopping.interceptor.BuyAuthorityInterceptor"/>
+        </mvc:interceptor>
+
+    </mvc:interceptors>
+
+
     <!-- serlet-mapping 映射路径：“/” -->
     <!-- 2.静态资源默认servlet配置
         1:加入对静态资源的处理：js,gif,png
@@ -63,7 +92,11 @@
         </property>
     </bean>
 
-
-
+    <!--multipartResolver配置-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="1048576"/>
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="resolveLazily" value="true"/>
+    </bean>
 
 </beans>

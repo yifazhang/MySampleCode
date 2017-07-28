@@ -54,4 +54,13 @@ public class PersonController {
         }
     }
 
+    @RequestMapping("/authority")
+    public String authority() {
+        return "authority";
+    }
+
+    @RequestMapping("/error")
+    public String error() {
+        return "error";
+    }
 }
