@@ -29,6 +29,7 @@
             <mvc:exclude-mapping path="/show"/>
             <mvc:exclude-mapping path="/index"/>
             <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/image/*"/>
             <mvc:exclude-mapping path="/api/login"/>
             <bean class="com.zhangyifa.shopping.interceptor.LoginInterceptor"/>
         </mvc:interceptor>
@@ -70,6 +71,12 @@
     <bean id="freemarkerConfig"
           class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="templateLoaderPath" value="/template/"/>
+        <!-- 设置页面中文乱码问题 -->
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="defaultEncoding">UTF-8</prop>
+            </props>
+        </property>
     </bean>
 
     <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">

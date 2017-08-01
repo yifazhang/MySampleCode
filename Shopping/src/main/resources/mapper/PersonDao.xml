@@ -13,7 +13,7 @@
             p.pass_word,
             p.nick_name,
             p.user_type
-        FROM Person p
+        FROM person p
         WHERE p.user_name = #{userName} AND p.pass_word = #{passWord}
     </select>
 
