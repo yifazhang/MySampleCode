@@ -1,3 +1,8 @@
+
+CREATE USER 'Ivan'@'%' IDENTIFIED BY '123456';
+GRANT ALL ON *.* TO 'Ivan'@'%';
+flush privileges;
+
 -- 数据库表结构：
 -- 创建数据库
 CREATE DATABASE `shopping0718`;
