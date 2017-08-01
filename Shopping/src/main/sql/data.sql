@@ -1,15 +1,16 @@
 
 DROP DATABASE IF EXISTS `shopping0718`;
-CREATE DATABASE `shopping0718` DEFAULT CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';
+CREATE DATABASE `shopping0718` DEFAULT CHARACTER SET 'utf8';
 
+USE `shopping0718`;
 
 DROP TABLE IF EXISTS `content`;
 CREATE TABLE `content` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `price` double DEFAULT NULL COMMENT '当前价格',
-  `title` varchar(100) DEFAULT NULL COMMENT '标题',
-  `image` varchar(500) DEFAULT NULL COMMENT '图片',
-  `summary` varchar(200) DEFAULT NULL COMMENT '摘要',
+  `title` varchar(1000) DEFAULT NULL COMMENT '标题',
+  `image` varchar(1000) DEFAULT NULL COMMENT '图片',
+  `summary` varchar(1000) DEFAULT NULL COMMENT '摘要',
   `detail` blob COMMENT '正文',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
