@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhangyifa.core.mapper.TestTbDao" >
+
+   <select id="listTb" resultType="com.zhangyifa.core.pojo.TestTb">
+      SELECT id, name, birthday from test_db
+   </select>
+
+   <insert id="addTestTb">
+      INSERT INTO test_db(name, birthday) VALUES (#{name}, #{birthday})
+   </insert>
+    
+</mapper>
