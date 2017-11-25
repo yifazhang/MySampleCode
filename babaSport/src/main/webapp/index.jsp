@@ -6,8 +6,9 @@
     <title>Insert title here</title>
 </head>
 <body>
-<form action="/test/springmvc.do">
-    <input type="text" value="2015-01-09 09:03:09" name="name">
+<form action="control/test/springmvc.do">
+    <input type="Date" value="2017-11-25 14:47:00" name="birthday">
+    <input type="String" value="看到说" name="name">
     <input type="submit" value="提交">
 </form>
 </body>

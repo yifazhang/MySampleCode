@@ -1,7 +1,7 @@
 package com.zhangyifa;
 
 import com.zhangyifa.common.junit.SpringJunitTest;
-import com.zhangyifa.core.bean.TestTb;
+import com.zhangyifa.core.pojo.TestTb;
 import com.zhangyifa.core.service.TestTbService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.zhangyifa.core.service;
 
-import com.zhangyifa.core.bean.TestTb;
+import com.zhangyifa.core.pojo.TestTb;
 
 import java.util.List;
 

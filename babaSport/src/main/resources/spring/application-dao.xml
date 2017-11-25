@@ -23,10 +23,10 @@
         <!-- 配置MyBatis全局配置文件：mybatis-config.xml -->
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
         <!-- 扫描entity包 使用别名 -->
-        <!--多个包用分号隔开就可以了-->
-        <property name="typeAliasesPackage" value="com.zhangyifa.core.bean"/>
-        <!-- 扫描sql配置文件：mapper需要的xml文件 -->
-        <property name="mapperLocations" value="classpath:com/zhangyifa/core/dao/*.xml"/>
+        <!--&lt;!&ndash;多个包用分号隔开就可以了&ndash;&gt;-->
+        <!--<property name="typeAliasesPackage" value="com.zhangyifa.core.pojo"/>-->
+        <!--&lt;!&ndash; 扫描sql配置文件：mapper需要的xml文件 &ndash;&gt;-->
+        <!--<property name="mapperLocations" value="classpath:mappers/*.xml"/>-->
     </bean>
 
     <!-- 4.配置扫描Dao接口包，动态实现Dao接口，注入到spring容器中 -->
@@ -34,7 +34,7 @@
         <!-- 注入sqlSessionFactory -->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!-- 给出需要扫描Dao接口包 -->
-        <property name="basePackage" value="com.zhangyifa.core.dao"/>
+        <property name="basePackage" value="com.zhangyifa.core.mapper"/>
     </bean>
 
 

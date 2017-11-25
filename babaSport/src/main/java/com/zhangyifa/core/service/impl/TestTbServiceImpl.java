@@ -1,7 +1,7 @@
 package com.zhangyifa.core.service.impl;
 
-import com.zhangyifa.core.bean.TestTb;
-import com.zhangyifa.core.dao.TestTbDao;
+import com.zhangyifa.core.mapper.TestTbDao;
+import com.zhangyifa.core.pojo.TestTb;
 import com.zhangyifa.core.service.TestTbService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
