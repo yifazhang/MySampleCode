@@ -1,5 +1,6 @@
 package com.zhangyifa.core.service.product;
 
+import com.zhangyifa.core.pojo.BbsBrand;
 import com.zhangyifa.core.pojo.EUDataGridResult;
 
 /**
@@ -9,4 +10,6 @@ public interface BrandService {
 
     EUDataGridResult getItemList(String name, Boolean isDisplay, int page, int rows);
 
+    void addBrand(BbsBrand brand);
+    
 }

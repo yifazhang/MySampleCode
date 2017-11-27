@@ -45,4 +45,9 @@ public class BrandServiceImpl implements BrandService {
         result.setPageSize(rows);
         return result;
     }
+
+	@Override
+	public void addBrand(BbsBrand brand) {
+		brandMapper.insert(brand);
+	}
 }
