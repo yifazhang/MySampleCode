@@ -2,12 +2,13 @@ package com.zhangyifa.core.controller.admin;
 
 import com.zhangyifa.core.pojo.BbsBrand;
 import com.zhangyifa.core.pojo.EUDataGridResult;
-import com.zhangyifa.core.service.product.BrandService;
+import com.zhangyifa.core.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by zhangyifa on 11/25/17.
@@ -45,6 +46,25 @@ public class BrandController {
     @RequestMapping(value = "/brand/add.do")
     public String add(BbsBrand brand) {
     	brandService.addBrand(brand);
+        return "redirect:/control/brand/list.do";
+    }
+    
+    @RequestMapping(value = "/brand/toEdit.do")
+    public String toEdit(int productId, ModelMap model) {
+    	BbsBrand brand = brandService.getBrandById(productId);
+    	model.addAttribute("brand", brand);
+        return "brand/edit";
+    }
+    
+    @RequestMapping(value = "/brand/edit.do")
+    public String edit(BbsBrand brand) {
+    	brandService.updateBrand(brand);
+        return "redirect:/control/brand/list.do";
+    }
+    
+    @RequestMapping(value = "/brand/delete.do")
+    public String edit(int productId) {
+    	brandService.deleteBrand(productId);
         return "redirect:/control/brand/list.do";
     }
 }

@@ -43,12 +43,12 @@
 				<td><input type="checkbox" value="${entry.id}" name="ids"/></td>
 				<td align="center">${entry.id}</td>
 				<td align="center">${entry.name}</td>
-				<td align="center"><img width="40" height="40" src="/res/img/pic/ppp0.jpg"/></td>
+				<td align="center"><img width="40" height="40" src="${entry.imgUrl}"/></td>
 				<td align="center">${entry.description}</td>
 				<td align="center">${entry.sort}</td>
 				<td align="center"><c:if test="${entry.isDisplay == true}">是</c:if><c:if test="${entry.isDisplay == false}">不是</c:if></td>
 				<td align="center">
-				<a class="pn-opt" href="#">修改</a> | <a class="pn-opt" onclick="if(!confirm('您确定删除吗？')) {return false;}" href="#">删除</a>
+				<a class="pn-opt" href="toEdit.do?productId=${entry.id}">修改</a> | <a class="pn-opt" onclick="if(!confirm('您确定删除吗？')) {return false;}" href="delete.do?productId=${entry.id}">删除</a>
 				</td>
 			</tr>
 		</c:forEach>

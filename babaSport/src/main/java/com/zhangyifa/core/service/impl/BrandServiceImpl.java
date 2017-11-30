@@ -1,4 +1,4 @@
-package com.zhangyifa.core.service.product;
+package com.zhangyifa.core.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -7,6 +7,8 @@ import com.zhangyifa.core.pojo.BbsBrand;
 import com.zhangyifa.core.pojo.BbsBrandExample;
 import com.zhangyifa.core.pojo.BbsBrandExample.Criteria;
 import com.zhangyifa.core.pojo.EUDataGridResult;
+import com.zhangyifa.core.service.BrandService;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,5 +51,21 @@ public class BrandServiceImpl implements BrandService {
 	@Override
 	public void addBrand(BbsBrand brand) {
 		brandMapper.insert(brand);
+	}
+
+	@Override
+	public BbsBrand getBrandById(Integer id) {
+		 BbsBrand brand = brandMapper.selectByPrimaryKey(id);
+		return brand;
+	}
+
+	@Override
+	public void updateBrand(BbsBrand brand) {
+		brandMapper.updateByPrimaryKey(brand);
+	}
+
+	@Override
+	public void deleteBrand(Integer id) {
+		brandMapper.deleteByPrimaryKey(id);
 	}
 }
