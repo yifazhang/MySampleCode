@@ -9,7 +9,7 @@ public class EUDataGridResult {
 
     private long total;
     private int pageSize;
-    private int pages;;
+    private int pages;
     private List<?> rows;
     public long getTotal() {
         return total;
